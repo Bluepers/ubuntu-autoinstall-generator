@@ -18,4 +18,4 @@ autoinstall:
   ssh:
     install-server: true
   early-commands:
-    - ping -c1 198.162.1.1
+    - "ping -c1 198.162.1.1"
