@@ -19,7 +19,3 @@ autoinstall:
     install-server: true
   early-commands:
     - ping -c1 198.162.1.1
-  late-commands:
-    - timedatectl set-timezone Asia/Tokyo
-    - add-apt-repository -y ppa:git-core/ppa
-    - apt update && apt -y upgrade
