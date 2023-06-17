@@ -20,8 +20,6 @@ autoinstall:
   early-commands:
     - ping -c1 198.162.1.1
   late-commands:
+    - timedatectl set-timezone Asia/Tokyo
     - add-apt-repository -y ppa:git-core/ppa
     - apt update && apt -y upgrade
-    - timedatectl set-timezone Asia/Tokyo
-    - ufw allow ssh
-    - ufw allow 3389
