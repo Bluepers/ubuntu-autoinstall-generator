@@ -17,3 +17,5 @@ autoinstall:
         dhcp6: true
   ssh:
     install-server: true
+    allow-pw: false
+    authorized-keys: ["$SSH_PUBKEY"]
