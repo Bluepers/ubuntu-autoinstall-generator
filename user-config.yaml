@@ -20,8 +20,6 @@ autoinstall:
     allow-pw: false
     authorized-keys: ["$SSH_PUBKEY"]
   late-commands:
-    - "lsb_release -a"
-    - "ip -4 -br -a"
     - "touch /etc/networkd-dispatcher/routable.d/add-ip-to-login-screen"
     - "echo '#!/bin/sh' >> /etc/networkd-dispatcher/routable.d/add-ip-to-login-screen"
     - "echo 'set -e' >> /etc/networkd-dispatcher/routable.d/add-ip-to-login-screen"
