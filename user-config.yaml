@@ -1,10 +1,6 @@
 #cloud-config
 autoinstall:
   version: 1
-  identity:
-    hostname: ubuntu-server
-    password: "$6$.mXU.Raz4YERUY3P$ohe.s8CHkeQwDuetCRi4GGiXrd07irtJ51c7n1ujP15TR63m85nOkH83UCvh.YO90COxyJ3VLbLAcxD.sDqq90"
-    username: ubuntu
   network:
     version: 2
     ethernets:
@@ -17,3 +13,14 @@ autoinstall:
         dhcp6: true
   ssh:
     install-server: true
+
+user-data:
+  disable_root: false
+  users:
+  - default
+  - name: ubuntu
+    passwd : "$6$.mXU.Raz4YERUY3P$ohe.s8CHkeQwDuetCRi4GGiXrd07irtJ51c7n1ujP15TR63m85nOkH83UCvh.YO90COxyJ3VLbLAcxD.sDqq90"
+    ssh-authorized_keys:
+    - $SSH_PUBKEY
+    groups: sudo
+    shell: /bin/bash
