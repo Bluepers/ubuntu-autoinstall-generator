@@ -17,3 +17,8 @@ autoinstall:
         dhcp6: true
   ssh:
     install-server: true
+  apt:
+    mirror-selection:
+        primary:
+            - uri: http://archive.ubuntu.com/ubuntu
+            - country-mirror
