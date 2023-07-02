@@ -21,4 +21,5 @@ autoinstall:
     preserver_source_list: false
     mirror-selection:
       primary:
-        - uri: http://archive.ubuntu.com/ubuntu
+        - arches: [default]
+          uri: http://archive.ubuntu.com/ubuntu
