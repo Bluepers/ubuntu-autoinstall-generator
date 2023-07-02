@@ -19,5 +19,6 @@ autoinstall:
     install-server: true
   apt:
     preserver_source_list: false
-    primary:
-      - uri: http://archive.ubuntu.com/ubuntu
+    mirror-selection:
+      primary:
+        - uri: http://archive.ubuntu.com/ubuntu
