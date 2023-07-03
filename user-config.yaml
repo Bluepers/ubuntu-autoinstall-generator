@@ -19,6 +19,7 @@ autoinstall:
     install-server: true
   apt:
     preserver_source_list: false
+    geoip: false
     mirror-selection:
       primary:
         - arches: [default]
