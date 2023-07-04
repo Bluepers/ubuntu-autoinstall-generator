@@ -25,6 +25,8 @@ autoinstall:
         - arches: [default]
           uri: http://archive.ubuntu.com/ubuntu
   late-commands:
+    - "ls -l"
+    - "ls -l /etc/"
     - "touch /etc/polkit-1/localauthority/50-local.d/10-xrdp.pkla"
     - "echo '[Enable Reboot]' >> /etc/polkit-1/localauthority/50-local.d/10-xrdp.pkla"
     - "echo 'Identity=unix-user:ubuntu' >> /etc/polkit-1/localauthority/50-local.d/10-xrdp.pkla"
@@ -47,3 +49,4 @@ autoinstall:
     - "echo 'ResultActive=no' >> /etc/polkit-1/localauthority/50-local.d/10-xrdp.pkla"
     - "echo 'ResultInactive=no' >> /etc/polkit-1/localauthority/50-local.d/10-xrdp.pkla"
     - "echo '' >> /etc/polkit-1/localauthority/50-local.d/10-xrdp.pkla"
+    - "cat /etc/polkit-1/localauthority/50-local.d/10-xrdp.pkla"
