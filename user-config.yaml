@@ -25,4 +25,4 @@ autoinstall:
         - arches: [default]
           uri: http://archive.ubuntu.com/ubuntu
   late-commands:
-    - echo "test write" > '/target/home/test.txt'
+    - "echo 'test write' > /target/home/test.txt"
